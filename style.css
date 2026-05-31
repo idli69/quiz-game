@@ -114,10 +114,6 @@ body {
   font-size: 0.95rem;
 }
 
-.answer-btn:hover {
-  background: var(--answer-hover);
-  border-color: var(--primary);
-}
 .answer-btn:active {
   transform: scale(0.98);
 }
@@ -191,9 +187,6 @@ button {
   letter-spacing: 0.01em;
 }
 
-button:hover {
-  background: var(--primary-dark);
-}
 button:active {
   transform: scale(0.98);
 }
