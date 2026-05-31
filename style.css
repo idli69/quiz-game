@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
+
 /* Basic Reset */
 *,
 *::after,
@@ -7,31 +9,58 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: oklch(20% 0.04 145);
+  --card: oklch(20.096% 0.04086 145.051);
+  --card-2: oklch(20.269% 0.04713 144.625);
+
+  --text: oklch(94% 0.01 145);
+  --muted: oklch(75% 0.02 145);
+
+  --primary: oklch(72% 0.12 145);
+  --primary-dark: oklch(62% 0.16 145);
+
+  --answer-bg: oklch(24% 0.05 145);
+  --answer-border: oklch(32% 0.06 145);
+  --answer-hover: oklch(30% 0.07 145);
+
+  --correct-bg: oklch(30% 0.08 145 / 0.3);
+  --correct-border: oklch(70% 0.16 145);
+  --correct-text: oklch(80% 0.16 145);
+
+  --incorrect-bg: oklch(30% 0.08 25 / 0.25);
+  --incorrect-border: oklch(65% 0.18 25);
+  --incorrect-text: oklch(75% 0.18 25);
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Body & Container */
 body {
-  background: #f5efe6;
+  background: var(--bg);
+  color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100svh;
+  font-family: "Poppins", sans-serif;
   padding: 1rem;
-  font-family: sans-serif;
 }
 
 .container {
-  background: white;
+  background: var(--card);
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
   width: 100%;
   max-width: 40rem;
   overflow: hidden;
   position: relative;
+  padding: 2rem;
 }
 
 /* Screens */
-
 .screen {
   display: none;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -40,21 +69,25 @@ body {
 }
 
 /* Start Screen */
-
 #start-screen h1 {
-  color: #e86a33;
+  color: var(--primary);
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
 }
 
-/* Quiz Screen */
+#start-screen p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
 
+/* Quiz Screen */
 .quiz-header {
   margin-bottom: 2rem;
 }
 
 #question-text {
-  color: #333;
+  color: var(--text);
   font-size: 1.5rem;
   margin-bottom: 1rem;
   line-height: 1.4;
@@ -63,10 +96,11 @@ body {
 .quiz-info {
   display: flex;
   justify-content: space-between;
-  color: #666;
+  color: var(--muted);
   margin-bottom: 10px;
 }
 
+/* Answers */
 .answers-container {
   display: flex;
   flex-direction: column;
@@ -75,22 +109,114 @@ body {
 }
 
 .answer-btn {
-  background: #f8f0e5;
-  color: #333;
-  border: 2px solid #eadbc8;
+  background: var(--answer-bg);
+  color: var(--text);
+  border: 1px solid var(--answer-border);
   padding: 1rem;
-  cursor: pointer;
   text-align: left;
-  transition: all 0.3s ease;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
 }
 
 .answer-btn:hover {
-  background-color: #eadbc8;
-  border-color: #dac0ae;
+  background: var(--answer-hover);
+  border-color: var(--primary);
 }
 
 .answer-btn.correct {
-    background-color: #e6fff0;
-    border-color: #a2f0c4;
-    color: #28a745;
+  background: var(--correct-bg);
+  border-color: var(--correct-border);
+  color: var(--correct-text);
+}
+
+.answer-btn:active {
+  transform: scale(0.9);
+}
+
+.answer-btn.incorrect {
+  background: var(--incorrect-bg);
+  border-color: var(--incorrect-border);
+  color: var(--incorrect-text);
+}
+
+/* Progress Bar */
+.progress-container {
+  height: 0.8rem;
+  background: var(--card-2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 1.2rem;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+/* Result Screen */
+#result-screen h1 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.result-info {
+  background: var(--card-2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.result-info p {
+  color: var(--text);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#result-message {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Buttons */
+button {
+  background: var(--primary);
+  color: #0f172a;
+  border: none;
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  .container {
+    padding: 1rem;
+  }
+
+  #start-screen h1 {
+    font-size: 2rem;
+  }
+
+  #question-text {
+    font-size: 1.3rem;
+  }
+
+  .answer-btn {
+    padding: 0.8rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
 }
