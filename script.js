@@ -168,7 +168,7 @@ maxScoreSpan.textContent = quizQuestions.length;
 startButton.addEventListener("click", startQuiz);
 restartButton.addEventListener("click", restartQuiz);
 
-// Functions
+// This function puts quizScreen to active mode and remove others.
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
