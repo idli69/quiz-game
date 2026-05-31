@@ -21,4 +21,5 @@ A simple browser-based quiz app built with HTML, CSS, and JavaScript.
 
 ## Screenshot
 
+<img width="1366" height="768" alt="Screenshot 2026-05-31 at 12-48-52 Quiz Game" src="https://github.com/user-attachments/assets/f5c42905-04fb-47be-8526-42ddf6e7a469" />
 
