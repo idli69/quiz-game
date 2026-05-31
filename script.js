@@ -20,48 +20,138 @@ const progressBar = $("progress");
 // Quiz Questions
 const quizQuestions = [
   {
-    question: "Which planet has a day longer than its year?",
+    question: "What is the fastest thing in the universe?",
     answers: [
-      { text: "Venus", correct: true },
-      { text: "Mars", correct: false },
-      { text: "Mercury", correct: false },
-      { text: "Neptune", correct: false },
+      { text: "Light", correct: true },
+      { text: "Sound", correct: false },
+      { text: "Gravity", correct: false },
+      { text: "Neutrinos", correct: false },
     ],
   },
   {
-    question: "How many hearts does an octopus have?",
+    question: "How many bones does a shark have?",
     answers: [
-      { text: "1", correct: false },
-      { text: "2", correct: false },
-      { text: "3", correct: true },
-      { text: "4", correct: false },
+      { text: "206", correct: false },
+      { text: "0", correct: true },
+      { text: "50", correct: false },
+      { text: "12", correct: false },
     ],
   },
   {
-    question: "Which planet rains diamonds?",
+    question: "What percentage of human DNA is shared with a banana?",
     answers: [
-      { text: "Mars", correct: false },
+      { text: "25%", correct: false },
+      { text: "50%", correct: true },
+      { text: "75%", correct: false },
+      { text: "10%", correct: false },
+    ],
+  },
+  {
+    question: "Which planet has the tallest volcano in the solar system?",
+    answers: [
+      { text: "Earth", correct: false },
       { text: "Venus", correct: false },
-      { text: "Mercury", correct: false },
-      { text: "Neptune", correct: true },
+      { text: "Mars", correct: true },
+      { text: "Jupiter", correct: false },
     ],
   },
   {
-    question: "Which is the only mammal capable of true powered flight?",
+    question: "What color is a mirror?",
     answers: [
-      { text: "Flying Squirrel", correct: false },
-      { text: "Bat", correct: true },
-      { text: "Sugar Glider", correct: false },
-      { text: "Flying Fox", correct: false },
+      { text: "Silver", correct: false },
+      { text: "White", correct: false },
+      { text: "Green", correct: true },
+      { text: "Gray", correct: false },
     ],
   },
   {
-    question: "What was discovered before Antarctica?",
+    question: "How hot is a lightning bolt?",
     answers: [
-      { text: "The Pacific Ocean", correct: false },
-      { text: "The Amazon River", correct: false },
-      { text: "The Sahara Desert", correct: false },
-      { text: "The planet Neptune", correct: true },
+      { text: "1,000°C", correct: false },
+      { text: "5,000°C", correct: false },
+      { text: "30,000°C", correct: true },
+      { text: "10,000°C", correct: false },
+    ],
+  },
+  {
+    question: "What is the only rock that floats on water?",
+    answers: [
+      { text: "Limestone", correct: false },
+      { text: "Obsidian", correct: false },
+      { text: "Pumice", correct: true },
+      { text: "Granite", correct: false },
+    ],
+  },
+  {
+    question: "How many atoms are in a grain of sand?",
+    answers: [
+      { text: "Millions", correct: false },
+      { text: "Billions", correct: false },
+      { text: "Quadrillions", correct: true },
+      { text: "Trillions", correct: false },
+    ],
+  },
+  {
+    question: "What is the loudest animal on Earth relative to its size?",
+    answers: [
+      { text: "Blue Whale", correct: false },
+      { text: "Pistol Shrimp", correct: true },
+      { text: "Howler Monkey", correct: false },
+      { text: "Sperm Whale", correct: false },
+    ],
+  },
+  {
+    question: "Which element has the highest melting point?",
+    answers: [
+      { text: "Iron", correct: false },
+      { text: "Carbon", correct: false },
+      { text: "Tungsten", correct: true },
+      { text: "Titanium", correct: false },
+    ],
+  },
+  {
+    question: "How long does it take light to travel from the Sun to Earth?",
+    answers: [
+      { text: "1 second", correct: false },
+      { text: "8 minutes", correct: true },
+      { text: "1 hour", correct: false },
+      { text: "30 seconds", correct: false },
+    ],
+  },
+  {
+    question: "What is the smallest unit of matter?",
+    answers: [
+      { text: "Atom", correct: false },
+      { text: "Electron", correct: false },
+      { text: "Quark", correct: true },
+      { text: "Proton", correct: false },
+    ],
+  },
+  {
+    question: "Which organ has no pain receptors?",
+    answers: [
+      { text: "Heart", correct: false },
+      { text: "Liver", correct: false },
+      { text: "Brain", correct: true },
+      { text: "Lungs", correct: false },
+    ],
+  },
+  {
+    question: "What is the most abundant gas in Earth's atmosphere?",
+    answers: [
+      { text: "Oxygen", correct: false },
+      { text: "Carbon Dioxide", correct: false },
+      { text: "Nitrogen", correct: true },
+      { text: "Argon", correct: false },
+    ],
+  },
+  {
+    question: "How many times does your heart beat in a lifetime?",
+    answers: [
+      { text: "500 million", correct: false },
+      { text: "2.5 billion", correct: true },
+      { text: "1 billion", correct: false },
+      { text: "100 million", correct: false },
     ],
   },
 ];
